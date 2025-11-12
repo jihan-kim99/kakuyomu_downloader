@@ -91,6 +91,17 @@ python kakuyomu.py install 16816700427572694145
 
 Or using the GUI, just enter `16816700427572694145` in the Book ID field and click "Download".
 
+## Building Windows Executables
+
+Use [PyInstaller](https://pyinstaller.org/en/stable/) with the provided spec files to produce standalone `.exe` launchers:
+
+```
+pyinstaller kakuyomu_gui.spec
+pyinstaller narou_gui.spec
+```
+
+The resulting executables will be placed inside the `dist/` folder. The specs bundle `userAgents.json` automatically, so keep that file next to the spec when running the command.
+
 ## Troubleshooting
 
 - If downloads fail, try again as it might be due to network issues or server-side rate limiting.
